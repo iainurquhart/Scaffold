@@ -85,7 +85,7 @@ function addPollField()
 		</tr>
 		{/if}
 		<tr>
-			<th scope="row">{lang:font_formatting}</th>
+			<th scope="row">{lang:font_formatting} ssss</th>
 			<td class="fm-content-wrapper fm-formatting-buttons">
 			
 				<select name="size" class="select" onchange="selectinsert(this, 'size')" >
@@ -168,10 +168,10 @@ function addPollField()
 				
 				<input type="checkbox" class="checkbox" name="announcement" value="y" {announce_checked} onclick="setannouncement();" /> {lang:make_post_announcement}<br />
 				
-				{if is_admin}
+				
 				&nbsp; &nbsp; &nbsp; <input type="radio" name="ann_type" value="t" {type_one_checked} /> {lang:in_this_forum}<br />
 				&nbsp; &nbsp; &nbsp; <input type="radio" name="ann_type" value="a" {type_all_checked} /> {lang:in_all_forums}
-				{/if}
+				
 				
 			</td>
 		</tr>
