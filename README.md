@@ -13,9 +13,14 @@ I'm still working through a few remaining view files, with some key tasks outsta
 
 ### Installation
 
-Rename the download to `scaffold`, drop it into /themes/forum_themes/ and activate via the cp.
+Rename the download to `scaffold`, drop it into `/themes/forum_themes/` and activate via the cp.
 
-### License / Disclaimer
+First thing you'll want to do is update the header files and sort out your paths, and customise the menu etc.
+You can find them in `/forum_global/`, `html_header.html` and `top_bar.html` are the files you're after.
+
+### Begging / License / Disclaimer
+
+If you find my work useful for your project, there's a nice green Pledgie donation button at the top of the page which could do with some love... You'd make this person in New Zealand quite happy, you would.
 
 Copyright (c) 2010 Iain Urquhart - shout@iain.co.nz
 
