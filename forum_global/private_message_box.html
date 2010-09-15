@@ -1,0 +1,8 @@
+<div class="fm-message-inset">
+	{lang:logged_in_as} 
+	<a href="{path:your_control_panel}" class="fm-name-link">{screen_name}</a>
+	<a href="{path:logout}" class="fm-logout-link">{lang:logout}</a>
+	<div class="fm-pm-indicator{if private_messages} fm-has-mail{/if}">
+		<a href="{path:private_messages}">{total_unread_private_messages} {lang:private_message}</a>
+	</div>
+</div>

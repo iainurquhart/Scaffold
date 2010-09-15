@@ -1,0 +1,22 @@
+    	
+{include:success_message}
+
+<div class="fm-header-wrapper">
+	<h3>{lang:edit_folders}</h3>
+	<p>{lang:folder_directions}</p>
+</div>
+
+{form:form_declaration:edit_folders}
+
+	<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid">
+		<tr>
+			<th>{lang:folder_name}</th>
+		</tr>
+		{include:current_folders}
+		{include:new_folder}
+	</table>
+
+	<p class="fm-submit">
+		<input  type='submit' class='submit' value='{lang:submit}'  />
+	</p>
+</form>

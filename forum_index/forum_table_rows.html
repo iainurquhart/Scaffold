@@ -1,0 +1,30 @@
+<tr class="fm-topic-row">
+	<td class="fm-topic-icon">
+		<a href="{path:viewforum}">
+			<img src="{topic_marker}" width="24" height="18" border="0" alt="{forum_name}" title="{forum_name}" />
+		</a>
+	</td>
+	<td class="fm-heading">
+		<h4><strong><a href="{path:viewforum}" title="{forum_name}">
+			{forum_name}
+		</a></strong></h4>
+		{if forum_description}
+		<p class="fm-description">
+			{forum_description}
+		</p> 
+		{/if}
+		{if forum_moderators}
+			<div class="forumLightLinks">{lang:moderated_by}
+				{moderators backspace='1'}<a href="{path:member_profile}">{name}</a>,{/moderators}
+			</div>
+		{/if}
+	</td>
+	<td class="fm-total-topics">{total_topics}</td>
+	<td class="fm-replies">{total_replies}</td>
+	<td class="fm-info">
+		{if recent_post}
+			<a href="{path:recent_thread}">{title}</a><br />
+			{lang:posted_by} <a href="{path:member_profile}">{author}</a>, {last_post format="%m-%d-%Y %h:%i %A"}
+		{/if}
+	</td>
+</tr>

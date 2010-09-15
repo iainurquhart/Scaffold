@@ -1,0 +1,28 @@
+	<div id="fm-footer">
+		
+		<p id="fm-powered-by">
+			<a href="http://expressionengine.com/" class="fm-credit-link">{lang:powered_by_ee}</a>
+			<span class="fm-load-stats">
+				{lang:ee_discussion_forum} - {lang:version} {module_version} ({forum_build})
+			<!-- {lang:elapsed_time} -->
+			</span>
+		</p>
+		{if feeds_enabled}
+		<p class="fm-feeds">
+			<a href="{path:rss}" class="fm-rss-link">{lang:rss_feed}</a>
+			<a href="{path:atom}" class="fm-atom-link">{lang:atom_feed}</a>
+		</p>
+		{/if}
+	</div>
+	
+	{if in_forum}
+			<select name="theme_switcher" class="select" onchange="if (this.value != '') location.href=this.value">
+				<option value="">{lang:select_theme}</option>
+				{include:theme_option_list}
+			</select>
+		{/if}
+</div> <!-- /#body-faux -->
+</div> <!-- /#forum-wrapper -->
+
+</body>
+</html>

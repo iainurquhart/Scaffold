@@ -1,0 +1,45 @@
+	
+{form:form_declaration:do_member_search}
+
+<div class="fm-header-wrapper">
+	<a href="JavaScript:window.close();" class="fm-button">{lang:close_window}</a>
+	<h3>{lang:member_search}</h3>
+</div>
+
+{if message}
+<div class="highlight">
+{include:message}
+</div>
+{/if}
+
+<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-has-th-row">
+	<tr>
+		<th scope="row">{lang:screen_name}</th>
+		<td class="fm-content-wrapper">
+			<input type='text' name='screen_name' id='screen_name' value='' size='35' maxlength='100' class='input'  />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">{lang:email}</th>
+		<td class="fm-content-wrapper">
+			<input type='text' name='email' id='email' value='' size='35' maxlength='100' class='input'  />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">{lang:member_group}</th>
+		<td class="fm-content-wrapper">
+			<select name='group_id' class='select' >
+				<option value='any'>{lang:any}</option>
+				{include:member_group_options}
+			</select>
+		</td>
+	</tr>
+</table>
+
+<p class="fm-submit">
+	<input type="submit" value="{lang:submit}" class="submit" />
+</p>
+
+</form>
+
+	

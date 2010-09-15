@@ -1,0 +1,110 @@
+{include:hidden_js}
+{include:search_js}
+{include:spellcheck_js}
+{include:text_counter_js}
+{include:dynamic_address_book}
+{include:submission_error}
+{include:preview_message}
+{form:form_declaration:messages}
+
+<div class="fm-header-wrapper">
+	<h3>{lang:new_message}</h3>
+</div>
+
+<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-has-th-row">
+	<tr>
+		<th>{include:search:recipients} {lang:message_recipients}</th>
+		<td class="fm-content-wrapper">
+			<textarea name='recipients' id='recipients' class='textarea' rows='2' cols='90' onkeyup='buddy_list(this.name);'>{input:recipients}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<th>{include:search:cc} {lang:cc}</th>
+		<td class="fm-content-wrapper">
+			<textarea name='cc' id='cc' class='textarea' rows='2' cols='90' onkeyup='buddy_list(this.name);'>{input:cc}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<th>{lang:message_subject}</th>
+		<td class="fm-content-wrapper">
+			<input type="text" class="input" name="subject" size="90" value="{input:subject}" />
+		</td>
+	</tr>
+	<tr>
+		<th>{lang:font_formatting}</th>
+		<td class="fm-content-wrapper fm-formatting-buttons">
+			
+			<select name="size" class="select" onchange="selectinsert(this, 'size')" >
+				<option value="0">{lang:size}</option>
+				<option value="1">{lang:small}</option>
+				<option value="3">{lang:medium}</option>
+				<option value="4">{lang:large}</option>
+				<option value="5">{lang:very_large}</option>
+				<option value="6">{lang:largest}</option>
+			</select>
+			
+			<select name="color" class="select" onchange="selectinsert(this, 'color')">
+				<option value="0">{lang:color}</option>
+				<option value="blue">{lang:blue}</option>
+				<option value="green">{lang:green}</option>
+				<option value="red">{lang:red}</option>
+				<option value="purple">{lang:purple}</option>
+				<option value="orange">{lang:orange}</option>
+				<option value="yellow">{lang:yellow}</option>
+				<option value="brown">{lang:brown}</option>
+				<option value="pink">{lang:pink}</option>
+				<option value="gray">{lang:grey}</option>
+			</select>
+			
+			{include:html_formatting_buttons}
+		</td>
+	</tr>
+	<tr>
+		<th>Message</th>
+		<td class="fm-content-wrapper">
+			<textarea name='body' id='body' class='textarea' rows='20' cols='90' onkeydown='text_counter();' onkeyup='text_counter();'>{input:body}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<th>{lang:characters}</th>
+		<td class="fm-content-wrapper">
+			<input type="text" class="input" name="charsleft" size="5" maxlength="4" value="{lang:max_chars}" readonly="readonly" />
+		</td>
+	</tr>
+	<tr>
+		<th>{lang:message_options}</th>
+		<td class="fm-content-wrapper">
+			<input type="checkbox" class="checkbox" name="sent_copy" value="y" {input:sent_copy_checked} /> {lang:sent_copy}
+			<br />
+			<input type="checkbox" class="checkbox" name="hide_cc" value="y" {input:hide_cc_checked} /> {lang:hide_cc}
+		</td>
+	</tr>
+	{if attachments_allowed}
+	<tr>
+		<th>{lang:attachments}</th>
+		<td class="fm-content-wrapper">
+			{lang:max_size}&nbsp;{lang:max_file_size} {lang:kb}<br />
+			<input type="file" name="userfile" size="20" class="input fm-file-upload" /><br />
+			{lang:click_preview_to_attach}
+		</td>
+	</tr>
+	{/if}
+	{if attachments_exist}
+	<tr>
+		<th>{lang:attachments}</th>
+		<td class="fm-content-wrapper">
+			{include:attachments}
+		</td>
+	</tr>
+	{/if}
+</table>
+
+	<p class="fm-submit">
+		<input type="submit" name="submit" class="submit" value="{lang:send_message}" />
+		<input type="submit" name="preview" class="submit" value="{lang:preview_message}" /> 
+		<input type="submit" name="draft" class="submit" value="{lang:draft_message}" /> 
+		
+	</p>
+
+</form>
+ 

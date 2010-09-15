@@ -1,0 +1,103 @@
+
+<script type="text/javascript">
+<!--
+
+function textcounter()
+{
+	var max		= {maxchars};
+	var base	= document.forms.submit_post;
+	var cur		= base.body.value.length;
+
+	if (cur > max)
+	{
+		base.body.value = base.body.value.substring(0, max);
+	} 
+	else
+	{
+		base.charsleft.value = max - cur
+	}
+}
+
+//-->
+</script>
+
+
+{form_declaration}
+
+	<div class="fm-header-wrapper">
+		<h3>{lang:edit_signature}</h3>
+	</div>
+
+
+<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-has-th-row">
+
+	<tr>
+		<th scope="row">{lang:font_formatting}</th>
+		<td class="fm-content-wrapper  fm-formatting-buttons">
+			<select name="size" class="select" onchange="selectinsert(this, 'size')" >
+				<option value="0">{lang:size}</option>
+				<option value="1">{lang:small}</option>
+				<option value="3">{lang:medium}</option>
+				<option value="4">{lang:large}</option>
+				<option value="5">{lang:very_large}</option>
+				<option value="6">{lang:largest}</option>
+			</select>
+				
+			<select name="color" class="select" onchange="selectinsert(this, 'color')">
+				<option value="0">{lang:color}</option>
+				<option value="blue">{lang:blue}</option>
+				<option value="green">{lang:green}</option>
+				<option value="red">{lang:red}</option>
+				<option value="purple">{lang:purple}</option>
+				<option value="orange">{lang:orange}</option>
+				<option value="yellow">{lang:yellow}</option>
+				<option value="brown">{lang:brown}</option>
+				<option value="pink">{lang:pink}</option>
+				<option value="gray">{lang:grey}</option>
+			</select>
+			
+			{include:html_formatting_buttons}
+			
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">{lang:signature}</th>
+		<td class="fm-content-wrapper">
+		<textarea name='body' class='textarea' rows='8' cols='90' onkeydown="textcounter();" onkeyup="textcounter();" >{signature}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">{lang:max_characters}</th>
+		<td class="fm-content-wrapper"><input type="text" class="input" name="charsleft" size="5" maxlength="4" value="{maxchars}" readonly="readonly"/></td>
+	</tr>
+	{if image}
+	<tr>
+		<th scope="row">{lang:signature_image}</th>
+		<td class="fm-content-wrapper"><img src="{path:signature_image}" border="0" width="{signature_image_width}" height="{signature_image_height}" title="{lang:signature_image}" />
+		<input type='submit' class='submit' value='{lang:remove_image}' name="remove" />
+		</td>
+	</tr>
+	{/if}
+	<tr>
+		<th scope="row">{lang:upload_image}</th>
+		<td class="fm-content-wrapper">
+		{if upload_allowed}
+			<input type="file" name="userfile" size="20" class="input" />
+			<span class="fm-field-notes">
+			{lang:max_image_size}<br />
+			lang:allowed_image_types}
+			</span>
+		{/if}
+		{if upload_not_allowed}
+			{lang:uploads_not_allowed}
+		{/if}
+		
+		</td>
+	</tr>
+</table>
+
+<p class="fm-submit">
+	<input type='submit' class='submit' value='{lang:update_signature}' name="submit" /> 
+</p>
+
+</form>

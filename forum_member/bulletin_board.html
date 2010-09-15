@@ -1,0 +1,30 @@
+	
+{if message}
+<div class='tableCellOne'><div class='success'>{include:message}</div></div>
+{/if}
+
+<div class="fm-header-wrapper">
+	<a href='{path:send_bulletin}' class="fm-button add">{lang:send_bulletin}</a>
+	<h3>{lang:bulletin_board}</h3>
+</div>
+
+{if can_post_bulletin}
+<p class="fm-post-bulletin">
+	
+</p>
+{/if}
+
+{if no_bulletins}
+<p class="fm-notice">{lang:message_no_bulletins}</p>
+{/if}
+
+{if bulletins}
+{include:bulletins}
+{/if}
+
+{if paginate}
+<div class="fm-pagination-wrapper">
+	<p class="fm-pagination">{include:pagination_link}</p>
+</div>
+{/if}
+    	

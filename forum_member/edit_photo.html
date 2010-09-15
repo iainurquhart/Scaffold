@@ -1,0 +1,36 @@
+
+{form_declaration}
+
+	<div class="fm-header-wrapper">
+		<h3>{lang:edit_photo}</h3>
+	</div>
+
+<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-has-th-row">
+	<tr>
+		<th scope="row">{lang:current_photo}</th>
+		<td class="fm-content-wrapper">
+		{if photo}
+			<img src="{path:member_photo}" border="0" width="{photo_width}" height="{photo_height}" title="{lang:my_photo}" alt="{lang:my_photo}" />
+		{/if}
+		{if no_photo}
+			<img src="{path:image_url}icon_profile.gif" width="50" height="50" border="0" title="{name}" alt="{lang:no_photo}" />
+		{lang:no_photo_exists}
+		{/if}
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">{lang:upload_photo}</th>
+		<td class="fm-content-wrapper">
+			<input type="file" name="userfile" size="20" class="input" />
+			<span class="fm-field-notes">
+				{lang:max_image_size}<br />
+				{lang:allowed_image_types}
+			</span>
+			</td>
+	</tr>
+</table>
+	<p class="fm-submit">
+		<input type='submit' class='submit' value='{lang:upload_photo}' name="submit" /> <input type='submit' class='submit' value='{lang:remove_photo}' name="remove" />
+	</p>
+
+</form>

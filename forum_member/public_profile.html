@@ -1,0 +1,92 @@
+<div class="fm-profile-detail-wrapper">
+	<div class="fm-header-wrapper">
+		<div class="fm-member-photo{if photo} fm-has-photo{/if}">
+			{if photo}
+				<img src="{path:photo_url}" class="photo" width="{photo_width}" height="{photo_height}" border="0" title="{name}" />
+				<p>{lang:my_photo}</p>
+			{/if}
+			{if not_photo}
+				<img src="{path:image_url}icon_profile.gif" width="50" height="50" border="0" title="{name}" alt="{lang:no_photo}" />
+				<p>{lang:no_photo_exists}</p>
+			{/if}
+		</div>
+		{if avatar}
+			<img src="{path:avatar_url}" width="{avatar_width}" height="{avatar_height}" border="0" alt="{name}" title="{name}" class="fm-avatar" />
+		{/if}
+		<h3>{name}</h3>
+		<p>{lang:member_group} <strong>{member_group}</strong><br />
+		<a href="{search_path}" class="fm-view-posts-by-author">{lang:view_posts_by_member}</a>
+		{if ignore}
+		<br />{ignore_link}
+		{/if}</p>
+	</div>
+</div>
+
+<div class="fm-profile-stats-wrapper">
+
+	<div class="fm-profile-communications">
+		<div class="fm-header-wrapper">
+			<h3>{lang:communications}</h3>
+		</div>
+		
+		<ul>
+			<li><strong>{lang:url}</strong> {if url}<a href="{url}" target="_blank"><img src="{path:image_url}icon_www.gif"  width="56" height="14" alt="{url}" title="{url}" border="0" /></a>{/if}</li>
+			<li><strong>{lang:email}</strong> 
+				{if accept_email}
+				<a href="#" {email_console}><img src="{path:image_url}icon_email.gif" width="56" height="14" alt="{lang:email_console}" title="" border="0" /></a>
+			{/if}</li>
+			{if can_private_message}
+			<li><strong>{lang:private_message}</strong> <a href="{send_private_message}"><img src="{path:image_url}icon_pm.gif" width="56" height="14" alt="{lang:send_pm}" title="{lang:send_pm}" border="0" /></a></li>
+			{/if}
+		</ul>
+	</div>
+	
+	<div class="fm-profile-personal-info">
+		<div class="fm-header-wrapper">
+			<h3>{lang:personal_info}</h3>
+		</div>
+		<ul>
+			<li><strong>{lang:location}</strong> {location}</li>
+			<li><strong>{lang:occupation}</strong> {occupation}</li>
+			<li><strong>{lang:interests}</strong> {interests}</li>
+			{custom_profile_fields}
+		</ul>
+	</div>
+	
+	<div class="fm-profile-statistics">
+		<div class="fm-header-wrapper">
+			<h3>{lang:statistics}</h3>
+		</div>
+		<ul>
+			<li><strong>{lang:member_group}</strong> {member_group}</li>
+			<li><strong>{lang:total_entries}</strong> {total_entries}</li>
+			<li><strong>{lang:total_comments}</strong> {total_comments}</li>
+			{if forum_installed} <!-- wtf? -->
+			<li><strong>{lang:total_forum_topics}</strong> {total_forum_topics}</li>
+			<li><strong>{lang:total_forum_replies}</strong> {total_forum_replies}</li>
+			<li><strong>{lang:total_forum_posts}</strong> {total_forum_posts}</li>
+			{/if}
+			<li><strong>{lang:member_local_time}</strong> {local_time format="%F %d, %Y &nbsp;%h:%i %A"}</li>
+			<li><strong>{lang:last_visit}</strong> {last_visit format="%F %d, %Y &nbsp;%h:%i %A"}</li>
+			<li><strong>{lang:join_date}</strong> {join_date format="%F %d, %Y &nbsp;%h:%i %A"}</li>
+			<li><strong>{lang:most_recent_entry}</strong> {last_entry_date format="%F %d, %Y &nbsp;%h:%i %A"}</li>
+			<li><strong>{lang:most_recent_comment}</strong> {last_comment_date format="%F %d, %Y &nbsp;%h:%i %A"}</li>
+			{if forum_installed}
+			<li><strong>{lang:most_recent_forum_post}</strong> {last_forum_post_date format="%F %d, %Y &nbsp;%h:%i %A"}</li>
+			{/if}
+			<li><strong>{lang:birthday}</strong> {birthday}</li>
+		</ul>
+	</div>
+		
+	<div class="fm-profile-bio">
+		<div class="fm-header-wrapper">
+			<h3>{lang:bio}</h3>
+		</div>
+		<div class="fm-message">
+			{if bio != ''}{bio}{/if}
+			{if bio == ''}{lang:no_info_available}{/if}
+		</div>
+	</div>
+	
+</div>
+

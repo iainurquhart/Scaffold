@@ -1,0 +1,52 @@
+{form_declaration}
+	<div class="fm-header-wrapper">
+		<a href="JavaScript:window.close();" class="fm-button">{lang:close_window}</a>
+		<h3>{lang:email_console}</h3>
+	</div>
+	
+	<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-has-th-row">
+		<tr>
+			<th>
+				{lang:recipient}
+			</th>
+			<td class="fm-content-wrapper">
+				<strong>{name}</strong>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<label for="fm-subject">{lang:subject}</label>
+			</th>
+			<td class="fm-content-wrapper">		
+				<input type="text" name="subject" id="fm-subject" value="" maxlength="80" class="input" size="70" />
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<label for="fm-message">{lang:message}</label>
+			</th>
+			<td class="fm-content-wrapper">	
+				<textarea name='message' id="fm-message" class='textarea' rows='8' cols='40'></textarea>
+			</td>
+		</tr>
+		<tr>
+			<th><label for="fm-self-copy">{lang:send_self_copy}</label></th>
+			<td class="fm-content-wrapper">	
+				<input type='checkbox' id="fm-self-copy" name='self_copy' value='y' />
+			</td>
+		</tr>
+		
+		<tr>
+			<th></th>
+			<td class="fm-content-wrapper fm-disclaimer">	
+				<p class="fm-submit">
+					<input type="submit" value="{lang:submit}" class="submit" /><br />
+				</p>
+				{lang:message_disclaimer}<br />
+				{lang:message_logged}
+			</td>
+		</tr>
+	</table>
+	
+	
+</form>

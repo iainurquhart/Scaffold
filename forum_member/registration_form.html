@@ -1,0 +1,112 @@
+<div class="fm-header-wrapper">
+	<h3>{lang:member_registration}</h3>
+	<p><span class="fm-required">*</span> {lang:required_fields}</p>
+</div>
+
+<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-has-th-row fm-member-registration">
+	<tr>
+		<th scope="row"><span class="fm-required">*</span> {lang:username}
+		<span class="fm-field-notes">{lang:password_length}</span>
+		</th>
+		<td class="fm-content-wrapper">
+			<input type="text" name="username" value="" maxlength="32" class="input" size="25" />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<span class="fm-required">*</span> {lang:password}
+		</th>
+		<td class="fm-content-wrapper">
+			<input type="password" name="password" value="" maxlength="32" class="input" size="25" />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<span class="fm-required">*</span> {lang:password_confirm}
+		</th>
+		<td class="fm-content-wrapper">
+			<input type="password" name="password_confirm" value="" maxlength="32" class="input" size="25" />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<span class="fm-required">*</span> {lang:screen_name}
+			<span class="fm-field-notes">{lang:screen_name_explanation}</span>
+		</th>
+		<td class="fm-content-wrapper">
+			<input type="text" name="screen_name" value="" maxlength="100" class="input" size="25" />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<span class="fm-required">*</span> {lang:email}
+		</th>
+		<td class="fm-content-wrapper">
+			<input type="text" name="email" value="" maxlength="120" class="input" size="40" />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<span class="fm-required">*</span> {lang:email_confirm}
+		</th>
+		<td class="fm-content-wrapper">
+			<input type="text" name="email_confirm" value="" maxlength="120" class="input" size="40" />
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			{lang:url}
+		</th>
+		<td class="fm-content-wrapper">
+			<input type="text" name="url" value="" maxlength="100" class="input" size="25" />
+		</td>
+	</tr>
+	{custom_fields}
+	<tr>
+		<th scope="row">
+			{required}<span class="fm-required">*</span>{/required} {field_name}
+			{if field_description}
+				<span class="fm-field-notes">{field_description}</span>
+			{/if}
+		</th>
+		<td class="fm-content-wrapper">
+			{field}
+		</td>
+	</tr>
+	{/custom_fields}
+	<tr>
+		<th scope="row">
+			{lang:terms_of_service}
+		</th>
+		<td class="fm-content-wrapper">
+			<textarea name='rules' style='width:100%' class='textarea' rows='8' cols='90' readonly>
+All messages posted at this site express the views of the author, and do not necessarily reflect the views of the owners and administrators of this site.
+
+By registering at this site you agree not to post any messages that are obscene, vulgar, slanderous, hateful, threatening, or that violate any laws.   We will permanently ban all users who do so.   
+
+We reserve the right to remove, edit, or move any messages for any reason.</textarea>
+		</td>
+	</tr>
+	{if captcha}
+	<tr>
+		<th scope="row">
+			<span class="fm-required">*</span> {lang:captcha}
+		</th>
+		<td class="fm-content-wrapper">
+			{captcha} <input type="text" class="input" name="captcha" value="" size="20" maxlength="20" />
+		</td>
+	</tr>
+	{/if}
+	<tr>
+		<th scope="row">
+			<span class="fm-required">*</span> {lang:terms_accepted}
+		</th>
+		<td class="fm-content-wrapper">
+			<input type='checkbox' name='accept_terms' value='y'  />
+		</td>
+	</tr>
+</table>
+
+<p class="fm-submit">
+	<input type="submit" value="{lang:submit}" class="submit" />
+</p>

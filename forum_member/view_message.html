@@ -1,0 +1,43 @@
+{form:form_declaration:view_message}
+{include:hidden_js}
+{include:folder_pulldown:move}
+{include:folder_pulldown:copy}
+
+<div class="fm-header-wrapper">
+	<h3>{lang:private_message}:<br /><strong>{include:subject}</strong></h3>
+</div>
+
+<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-private-message-details">
+	<tr>
+		<th>{lang:message_sender}</th>
+		<th>{lang:message_date}</th>
+		<th>{lang:message_recipients}</th>
+		<th>{lang:cc}:</th>
+	</tr>
+	<tr>
+		<td class="fm-content-wrapper">{include:sender}</td>
+		<td class="fm-content-wrapper">{include:date}</td>
+		<td class="fm-content-wrapper">{include:recipients}</td>
+		<td class="fm-content-wrapper">{if show_cc}{include:cc}{/if}</td>
+	</tr>
+</table>
+{if attachments_exist}
+<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-has-th-row fm-private-message-attachments">
+	
+	<tr>
+		<th scope="row">{lang:attachments}:</th>
+		<td class="fm-content-wrapper">{include:attachment_links}</td>
+	</tr>
+
+</table>
+	{/if}
+<div class="fm-message">
+	{include:parsed_message}
+</div>
+
+<p class="fm-submit">
+	{form:reply_button} {form:reply_all_button} {form:forward_button} {form:move_button} {form:copy_button} {form:delete_button}
+</p>
+
+
+</form>

@@ -1,0 +1,54 @@
+	<div class="fm-header-wrapper">
+		<h3>{lang:your_stats}</h3>
+	</div>
+
+<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-has-th-row">
+	<tr>
+		<th>{lang:email}</th>
+		<td class="fm-content-wrapper">{email}</td>
+	</tr>
+	<tr>
+		<th>{lang:join_date}</th>
+		<td class="fm-content-wrapper">{join_date}</td>
+	</tr>
+	<tr>
+		<th>{lang:last_visit}</th>
+		<td class="fm-content-wrapper">{last_visit_date}</td>
+	</tr>
+	{if forum_installed} <!-- wtf -->
+	<tr>
+		<th>{lang:most_recent_forum_post}</th>
+		<td class="fm-content-wrapper">{recent_forum_post_date}</td>
+	</tr>
+	{/if}
+	<tr>
+		<th>{lang:most_recent_entry}</th>
+		<td class="fm-content-wrapper">{recent_entry_date}</td>
+	</tr>
+	<tr>
+		<th>{lang:most_recent_comment}</th>
+		<td class="fm-content-wrapper">{recent_comment_date}</td>
+	</tr>
+	{if forum_installed}
+	<tr>
+		<th>{lang:total_forum_topics}</th>
+		<td class="fm-content-wrapper">{total_topics}</td>
+	</tr>
+	<tr>
+		<th>{lang:total_forum_replies}</th>
+		<td class="fm-content-wrapper">{total_replies}</td>
+	</tr>
+	<tr>
+		<th>{lang:total_forum_posts}</th>
+		<td class="fm-content-wrapper">{total_posts}</td>
+	</tr>
+	{/if}
+	<tr>
+		<th>{lang:total_entries}</th>
+		<td class="fm-content-wrapper">{total_entries}</td>
+	</tr>
+	<tr>
+		<th>{lang:total_comments}</th>
+		<td class="fm-content-wrapper">{total_comments}</td>
+	</tr>
+</table>

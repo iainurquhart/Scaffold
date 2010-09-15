@@ -1,0 +1,29 @@
+{form_declaration:forum:delete_post}
+
+	<div class="fm-header-wrapper">
+		<h3>{lang:delete_confirm}</h3>
+	</div>
+
+<table class="fm-data-grid fm-delete-warning" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td class="fm-post-wrapper">
+			<strong>{if is_topic}{lang:thread_delete_warning}{/if}
+			{if is_reply}{lang:post_delete_warning}{/if}</strong>
+			
+			<br />
+			{if is_topic}{lang:thread_delete_info} {/if}
+			{lang:action_can_not_be_undone}
+		</td>
+	</tr>
+</table>
+
+	<p class="fm-submit">
+		<input type="submit" name="submit" class="submit" value="{lang:delete}" />
+	</p>
+	
+<div class="fm-message">
+	{if is_topic}<h3>{title}</h3>{/if}
+	{body}
+</div>
+
+</form>

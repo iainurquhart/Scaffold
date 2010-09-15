@@ -1,0 +1,31 @@
+{form_declaration}
+<div class="fm-header-wrapper">
+	<h3>{lang:ignore_member_confirmation}</h3>
+</div>
+
+<div class="fm-message">
+	{if member_is_ignored}
+		<p class="fm-notice">{lang:already_ignored}</p>
+	{/if}
+
+	{if member_not_ignored}
+		<p>
+			<label for="fm-ignore-member">
+				{lang:ignore_member}: <strong>{name}</strong>
+			</label>
+			<input type='radio' name='action' value='ignore' checked="checked" id="fm-ignore-member" />
+		</p>
+	{/if}
+	{if member_is_ignored}
+		<p>
+			<label for="fm-unignore-member">
+				{lang:unignore_member}: <strong>{name}</strong>
+			</label>
+			<input type='radio' name='action' value='unignore' checked="checked" id="fm-unignore-member" />
+		</p>
+	{/if}
+	<p class="fm-submit">
+		<input type="submit" name="submit" class="submit" value="{lang:submit}" />
+	</p>
+</div>
+</form>

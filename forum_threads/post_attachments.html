@@ -1,0 +1,22 @@
+{if thumb_attach}
+	<div class="fm-image-attachments fm-attachments fm-thumbs">
+	<h4>{lang:image_attachments}</h4>
+		{include:thumb_attachments}
+		<p>{lang:click_for_fullsize}</p>
+	</div>
+{/if}
+{if image_attach}
+	<div class="fm-image-attachments fm-attachments">
+	<h4>{lang:image_attachments}</h4>
+		{include:image_attachments}
+	</div>
+{/if}
+{if file_attach}
+	<div class="fm-file-attachments fm-attachments">
+	<h4>{lang:file_attachments}</h4>
+	
+	<ul>
+		{include:file_attachments}
+	</ul>
+	</div>
+{/if}

@@ -1,0 +1,32 @@
+{if is_ignored}
+<tr>
+ <td colspan="5">
+ 	{lang:topic_hidden} <strong>{author}</strong> {lang:is_ignored}.
+ 	<a href="#" onclick="showHideRow('{id1}');return false;">{lang:view_hide}</a>
+ 	<a href="{path:ignore}">{lang:stop_ignoring} {author}</a>
+ </td>
+</tr>
+{/if}
+
+
+<tr class="fm-topic-row">
+	<td class="fm-topic-icon">
+		<a href="{path:view_thread}">
+			<img src="{topic_marker}" width="24" height="18" border="0" alt="{forum_name}" title="{forum_name}" />
+		</a>
+	</td>
+	<td class="fm-heading">
+		<h4{if is_new} class="fm-new-topic"{/if}><strong><a href="{path:view_thread}" title="{forum_name}">
+			{topic_title}
+		</a></strong></h4>
+		<p>{lang:posted_by} <a href="{path:member_profile}">{author}</a> {if pagelinks}( {pagelinks} ){/if}</p>
+		
+	</td>
+	<td class="fm-total-topics">{total_views}</td>
+	<td class="fm-replies">{total_replies}</td>
+	<td class="fm-info">
+		{if is_topic}{lang:posted_on} {last_reply format="%m-%d-%Y %h:%i %A"}<br />{/if}
+		{if is_post}<a href="{path:post_link}">{lang:posted_on} {last_reply format="%m-%d-%Y %h:%i %A"}</a><br />{/if}
+		{lang:posted_by} <a href="{path:reply_member_profile}">{reply_author}</a>
+	</td>
+</tr>

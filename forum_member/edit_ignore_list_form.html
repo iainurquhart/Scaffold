@@ -1,0 +1,27 @@
+
+{include:toggle_js}
+
+	<div class="fm-header-wrapper">
+		<h3>{include:member_search} {lang:ignore_list}</h3>
+	</div>
+{if success_message}
+<div class="fm-success-message fm-message">
+	<p>{lang:message}</p>
+</div>
+{/if}
+
+{form:form_declaration}
+
+<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-has-th-row">
+	<tr>
+		<th>{lang:screen_name}</th>
+		<th></th>
+	</tr>
+	{include:edit_ignore_list_rows}
+</table>
+
+<p class="fm-submit">
+	{form:add_button} {form:delete_button}
+</p>
+
+</form>

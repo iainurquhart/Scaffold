@@ -1,0 +1,16 @@
+
+<div class="{style} fm-bulletin" id="bulletin_div_{bulletin_id}">
+
+<h4>{lang:message_sender}: <strong>{bulletin_sender}</strong></h4>
+<p class="fm-meta">{lang:message_date}</span>: {bulletin_date}</p>
+
+
+<textarea name='bulletin_{bulletin_id}' readonly='readonly' class='textarea' rows='8' cols='90'>{bulletin_message}</textarea>
+{if can_delete_bulletin}
+	<a href='{path:delete_bulletin}' class="fm-button delete" onclick='if( ! confirm("{lang:delete_bulletin_popup}")) return false;'>
+	{lang:delete_bulletin}
+	</a>
+</p>
+{/if}
+</div>
+    	

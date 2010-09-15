@@ -1,0 +1,19 @@
+<div class="fm-header-wrapper">
+	<h3>{lang:member_banning}</h3>
+</div>
+
+<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid">
+	<tr>
+		<th scope="row">{lang:member_banned}</th>
+		<td class="fm-content-wrapper">{name}</td>
+	</tr>
+	{if banned_ips}
+	<tr>
+		<th scope="row">{lang:ip_addresses_banned}</th>
+		<td class="fm-content-wrapper">{banned_ips}</td>
+	</tr>
+	{/if}
+</table>
+<p class="fm-submit">
+	<a href="{path:forum_home}">{forum_name}</a>
+</p>

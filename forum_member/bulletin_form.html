@@ -1,0 +1,50 @@
+{form:form_declaration:sending_bulletin}
+	{if message}
+	{include:message}
+	{/if}
+	
+	<div class="fm-header-wrapper">
+		<h3>{lang:send_bulletin}</h3>
+	</div>
+	
+	<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-has-th-row">
+	
+		<tr>
+			<th>
+				{lang:member_group}
+			</th>
+			<td class='tableCellOne'>
+				<select name="group_id">
+					{group_id_options}
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				{lang:bulletin_message}
+			</th>
+			<td>
+				<textarea name='bulletin_message' class='textarea' rows='10' cols='60'></textarea>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				{lang:bulletin_date}
+			</th>
+			<td>
+				<input type="text" class="input" name="bulletin_date" size="20" value="{input:bulletin_date}" maxlength="50" />
+			</td>
+		</tr>
+		<tr>
+			<th>
+				{lang:bulletin_expires}
+			</th>
+			<td>
+				<input type="text" class="input" name="bulletin_expires" size="20" value="{input:bulletin_expires}" maxlength="50" />
+			</td>
+		</tr>
+	</table>
+	<p class="fm-submit">
+		<input type='submit' class='submit' value='{lang:submit}' />
+	</p>
+</form>

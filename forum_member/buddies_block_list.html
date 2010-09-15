@@ -1,0 +1,28 @@
+{include:toggle_js}
+{include:buddy_search_js}
+<div class="fm-header-wrapper">
+	<h3>{include:member_search} {lang:list_title}</h3>
+</div>
+
+{form:form_declaration:list}
+<table border='0' cellspacing='0' cellpadding='0' class='fm-blocked-list' >
+	<tr>
+		<td>
+		{lang:screen_name}
+		</td>
+		<td>
+			{lang:member_description}
+		</td>
+		<td>
+			<input class='checkbox' type='checkbox' name='toggleflag' value='' onclick="toggle(this);" />
+		</td>
+	</tr>
+	{include:list_rows}
+</table>
+
+<p class="fm-submit">
+{form:add_button} {form:delete_button}
+</p>
+
+</form>
+    	

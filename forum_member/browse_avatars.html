@@ -1,0 +1,24 @@
+
+{form_declaration}
+
+<div class="fm-header-wrapper">
+	<h3>{lang:browse_avatars}</h3>
+	<p>{lang:current_avatar_set} <strong>{avatar_set}</strong></p>
+</div>
+<table border="0" cellpadding="3" cellspacing="3" class="fm-avatar-grid">
+{avatar_table_rows}
+</table>
+
+
+{if pagination}
+<div class="fm-pagination-wrapper">
+	<p class="fm-pagination">{pagination}</p>
+</div>
+{/if}
+
+<p class="fm-submit">
+	<input type='submit' class='submit' value='{lang:choose_selected}' />
+</p>
+
+
+</form>

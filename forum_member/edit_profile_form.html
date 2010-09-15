@@ -1,0 +1,64 @@
+<form method="post" action="{path:update_profile}">
+
+	<div class="fm-header-wrapper">
+		<h3>{lang:edit_your_profile}</h3>
+		<p><span class="fm-required-indicator">*</span> {lang:required}</p>
+	</div>
+
+<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-has-th-row">
+	<tr>
+		<th><label for="fm=url">{lang:url}</label></th>
+		<td class="fm-content-wrapper"><input type='text' class='input' id="fm=url" name='url' value='{url}' maxlength='75' /></td>
+	</tr>
+	<tr>
+		<th><label>{lang:birthday}</label></th>
+		<td class="fm-content-wrapper">{form:birthday_year} {form:birthday_month} {form:birthday_day}</td>
+	</tr>
+	<tr>
+		<th><label for="fm-location">{lang:location}</label></th>
+		<td class="fm-content-wrapper"><input type='text' class='input' id="fm-location" name='location' value='{location}' maxlength='50'/>
+		</td>
+	</tr>
+	<tr>
+		<th><label for="fm-occupation">{lang:occupation}</label></th>
+		<td class="fm-content-wrapper"><input type='text' class='input' id="fm-occupation" name='occupation' value='{occupation}' maxlength='80'/>
+		</td>
+	</tr>
+	<tr>
+		<th><label for="fm-interests">{lang:interests}</label></th>
+		<td class="fm-content-wrapper"><input type='text' class='input' id="fm-interests" name='interests' value='{interests}' maxlength='120'/>
+		</td>
+	</tr>
+	<tr>
+		<th><label for="fm-aol-im">{lang:aol_im}</label></th>
+		<td class="fm-content-wrapper"><input type='text' class='input' id="fm-aol-im" name='aol_im' value='{aol_im}' maxlength='50'/>
+		</td>
+	</tr>
+	<tr>
+		<th><label for="fm-icq">{lang:icq}</label></th>
+		<td class="fm-content-wrapper"><input type='text' class='input' id="fm-icq" name='icq' value='{icq}' maxlength='50'/>
+		</td>
+	</tr>
+	<tr>
+		<th><label for="fm-yahoo-im">{lang:yahoo_im}</label></th>
+		<td class="fm-content-wrapper"><input type='text' class='input' id="fm-yahoo-im" name='yahoo_im' value='{yahoo_im}' maxlength='50'/>
+		</td>
+	</tr>
+	<tr>
+		<th><label for="fm-msn-im">{lang:msn_im}</label></th>
+		<td class="fm-content-wrapper"><input type='text' class='input' id="fm-msn-im" name='msn_im' value='{msn_im}' maxlength='50'/>
+		</td>
+	</tr>
+	<tr>
+		<th><label for="fm-bio">{lang:bio}</label></th>
+		<td class="fm-content-wrapper"><textarea name='bio' id="fm-bio" class='textarea' rows='12' cols='90'>{bio}</textarea>
+		</td>
+	</tr>
+	{custom_profile_fields}
+</table>
+
+	<p class="fm-submit">
+		<input type='submit' class='submit' value='{lang:update}' />
+	</p>
+
+</form>

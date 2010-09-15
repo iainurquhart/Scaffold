@@ -1,0 +1,44 @@
+
+{form_declaration}
+
+<div class="fm-header-wrapper">
+	<h3>{lang:edit_avatar}</h3>
+</div>
+
+<table border='0' cellspacing='0' cellpadding='0' class="fm-has-th-row fm-data-grid">
+	<tr>
+		<th>{lang:current_avatar}</th>
+		<td class="fm-content-wrapper">
+			{if avatar}
+			<img src="{path:avatar_image}" border="0" width="{avatar_width}" height="{avatar_height}" title="{lang:my_avatar}" alt="{lang:my_avatar}" />
+			{/if}
+			{if no_avatar}{lang:no_avatar}{/if}
+		</td>
+	</tr>
+	{if installed_avatars}
+	<tr>
+		<th>{lang:choose_installed_avatar}</th>
+		<td class="fm-content-wrapper">{include:avatar_folder_list}</td>
+	</tr>
+	{/if}
+	{if can_upload_avatar}
+	<tr>
+		<th><label for="fm-upload-an-avatar">{lang:upload_an_avatar}</label></th>
+		<td class="fm-content-wrapper">
+			<input type="file" name="userfile" id="fm-upload-an-avatar" size="20" class="input file-upload" />
+			<span class="fm-field-notes">
+			{lang:max_image_size}<br />
+			{lang:allowed_image_types}</span>
+		</td>
+	</tr>
+	{/if}
+</table>
+
+	<p class="fm-submit">
+		{if can_upload_avatar}
+			<input type='submit' class='submit' value='{lang:upload_avatar}' name="submit" />
+		{/if}
+		<input type='submit' class='submit' value='{lang:remove_avatar}' name="remove" />
+	</p>
+
+</form>

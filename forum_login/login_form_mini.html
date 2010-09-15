@@ -1,0 +1,27 @@
+{form_declaration:member:member_login}
+<table cellpadding="0" cellspacing="0" border="0" id="fm-quick-login">
+	<tr>
+		<th scope="row">
+			<label for="fm-quick-username">{lang:username}</label>
+		</th>
+		<td>
+			<input type="text" id="fm-quick-username" class="input" name="username" size="15" value="" />
+		</td>
+		<td>
+			<input type="checkbox" id="fm-quick-remember" class="checkbox" name="auto_login" value="1" checked="checked" />
+			<label for="fm-quick-remember">{lang:remember_me}</label>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<label for="fm-quick-pwd">{lang:password}</label>
+		</th>
+		<td>
+			<input type="password" id=="fm-quick-pwd" class="input" name="password" size="15" />
+		</td>
+		<td>
+			<input type="submit" class="submit" value="{lang:login}" /> <a href="{path:forgot}">{lang:forgot_your_password}</a>	
+		</td>
+	</tr>
+</table>
+</form>

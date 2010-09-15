@@ -1,0 +1,39 @@
+{form_declaration}
+<div class="fm-login-wrapper">
+	<div class="fm-header-wrapper">
+		<h3>{lang:login_required}</h3>
+		<p>{lang:must_be_logged_in}</p>
+	</div>
+	<!-- @lang -->
+	<div class="fm-header-wrapper fm-register-prompt">
+		<p>Don't have an account? <a href="{path:register}" class="fm-register">Register</a></p>
+	</div>
+	<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-has-th-row">
+		<tr>
+			<th><label for="fm-username">{lang:username}</label></th>
+			<td class="fm-content-wrapper">
+				<input type="text" class="input" id="fm-username" name="username" size="20" value="" maxlength="50" />
+			</td>
+		</tr>
+		<tr>
+			<th><label for="fm-password">{lang:password}</label></th>
+			<td class="fm-content-wrapper">
+				<input type="password" id="fm-password" class="input" name="password" size="20" value="" maxlength="32" />
+			</td>
+		</tr>
+		<tr>
+			<th>{lang:options}</th>
+			<td class="fm-content-wrapper">
+				<input type="checkbox" class="checkbox" id="fm-auto-login" name="auto_login" value="1" checked="checked" />
+				<label for="fm-auto-login">{lang:auto_login}</label>
+				<br />
+				<input type="checkbox"  id="fm-show-name" class="checkbox" name="anon" value="1" checked="checked" />
+				<label for="fm-auto-login">{lang:show_name}</label>
+			</td>
+		</tr>
+	</table>
+	<p class="fm-submit">
+		<input type="submit" class="submit" value="{lang:submit}" /> <a href="{path:forgot}" class="fm-pwd-forgot">{lang:forgot_password}</a>
+	</p>
+</div>
+</form>

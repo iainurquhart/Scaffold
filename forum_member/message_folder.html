@@ -1,0 +1,61 @@
+
+{include:hidden_js}
+{include:toggle_js}
+
+<div class="fm-header-wrapper fm-private-messages">
+	<a href="{path:compose_message}" class="fm-button">{lang:compose_message}</a>
+	<h3>{lang:folder_name}</h3>
+	<p>{lang:storage_status}</p>
+</div>
+
+<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid">
+	<tr>
+		<td class="fm-content-wrapper">
+		<table id="fm-mailbox-indicator" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td rowspan="2">
+			{lang:storage_percentage}<br />
+			<a href='{path:erase_messages}' onclick='if( ! confirm("{lang:erase_popup}")) return false;' class="fm-mailbox-empty-trash ">{lang:erase_messages}</a></td>
+			<td colspan="3" id="fm-mailbox-indicator-bar">
+				<div style="width:{image:messages_graph:width}px; 
+				height:{image:messages_graph:height}px;">
+			</td>
+		</tr>
+		<tr>
+			<td class="fm-first">0%</td><td class="fm-second">50%</td><td class="fm-third">100%</td>
+		</tr>
+		</table>
+		
+		</td>
+	</tr>
+</table>
+
+{form:form_declaration:modify_messages}
+
+<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-mailbox-table">
+	<tr>
+		<th colspan="2" class="fm-message-subject">{include:folder_pulldown:change}</th>
+		<th class="fm-message-sender">{lang:message_sender}</th>
+		<th class="fm-message-date">{lang:message_date}</th>
+		<th class="fm-message-checkbox"><input class='checkbox' type='checkbox' name='toggleflag' value='' onclick="toggle(this);" /></th>
+	</tr>
+	{include:folder_rows}
+	{if paginate}
+	<tr>
+		<td></td>
+		<td colspan="4">
+		 {include:pagination_link} 
+		</td>
+	</tr>
+	{/if}
+</table>
+
+{include:folder_pulldown:move}
+
+{include:folder_pulldown:copy}
+
+	<p class="fm-submit">
+		{form:copy_button}{form:move_button}{form:delete_button}
+	</p>
+
+</form>

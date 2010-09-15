@@ -1,0 +1,58 @@
+
+<form method="post" action="{path:update_email_settings}">
+	<div class="fm-header-wrapper">
+		<h3>{lang:email_settings}</h3>
+		<p><span class="fm-required-indicator">*</span> {lang:required}</p>
+	</div>
+	
+<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid fm-has-th-row">
+	<tr>
+		<th><label for="fm-email">{lang:email}</label></th>
+		<td class="fm-content-wrapper">
+			<input type='text' class='input' name='email' id="fm-email" value='{email}' maxlength='75'/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="fm-content-wrapper">
+			<input type='checkbox' id="fm-accept-admin-email" name='accept_admin_email' value='y' {state:accept_admin_email} />
+			<label for="fm-accept-admin-email">{lang:accept_admin_email}</label>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="fm-content-wrapper">
+			<input type='checkbox' id="fm-accept-user-email" name='accept_user_email' value='y' {state:accept_user_email} />
+			<label for="fm-accept-user-email">{lang:accept_user_email}</label>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="fm-content-wrapper">
+			<input type='checkbox' id="fm-notify-by-default" name='notify_by_default' value='y' {state:notify_by_default} />
+			<label for="fm-notify-by-default">{lang:notify_by_default}</label>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="fm-content-wrapper">
+			<input type='checkbox' id="fm-notify-of-pm" name='notify_of_pm' value='y' {state:notify_of_pm} />
+			<label for="fm-notify-of-pm">{lang:notify_of_pm}</label>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="fm-content-wrapper">
+			<input type='checkbox' id="fm-enable-smart-notifications" name='smart_notifications' value='y' {state:smart_notifications} />
+			<label for="fm-enable-smart-notifications">{lang:enable_smart_notifications}</label>
+		</td>
+	</tr>
+	<tr>
+		<th>{lang:existing_password}</th>
+		<td class="fm-content-wrapper">
+			<input type='password' class='input' name='password' value='' maxlength='32' style='width:300px'/>
+			<span class="fm-field-notes">
+				{lang:existing_password_email}
+			</div>
+		</td>
+	</tr>
+</table>
+	<p class="fm-submit">
+		<input type='submit' class='submit' value='{lang:update}' />
+	</p>
+</form>
