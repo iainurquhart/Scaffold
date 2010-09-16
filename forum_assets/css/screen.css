@@ -81,7 +81,8 @@ ul#fm-home-tools li a {display: block; padding: 5px 10px;}
 .fm-topic-subtitle {padding: 0 15px;}
 .fm-thread-footer-wrapper p {padding-top: 15px;}
 
-.fm-header-wrapper span {float: right;}
+.fm-header-wrapper span,
+.fm-thread-footer-wrapper span {float: right;}
 
 .fm-notification-wrapper {padding: 0 15px;}
 
@@ -151,6 +152,40 @@ p.fm-thread-unsubscribe a {color: #666;}
 .fm-new-topic-wrapper {padding: 15px 30px}
 
 .fm-field-notes {font-size: 11px; clear: left; display: block; padding: 4px;}
+
+
+.fm-poll-wrapper {background: #343434; color: #fff; padding-bottom: 20px; border-top: 1px solid #fff;}
+.fm-poll-wrapper * {margin: 0;}
+.fm-poll-wrapper table {margin-bottom: 0; margin-right: 15px;}
+.fm-poll-wrapper table td,
+.fm-poll-wrapper table th {border-bottom: none; font-weight: normal; background: #343434; text-shadow: 0 1px 0 #000; }
+.fm-poll-wrapper table td {padding: 10px;}
+.fm-poll-wrapper table th { padding: 10px 15px 10px 15px; font-size: 18px;}
+.fm-poll-wrapper table th span {font-size: 11px;}
+.fm-poll-wrapper table td.fm-poll-choice {text-align: right; width: 250px; background: #000;}
+.fm-poll-ask .fm-poll-choice {}
+.fm-poll-wrapper table td.fm-poll-graph-wrapper { }
+.fm-poll-graph {
+background: #fff;
+background: -moz-linear-gradient(top, #fff, #f6f6f6); /* gecko */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #f6f6f6));
+float: left;
+ padding: 0 3px 0 7px; 
+ color: #666; 
+ font-weight: bold; 
+ font-size: 14px; 
+-webkit-box-reflect:below 1px -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.1)));
+border-bottom-right-radius: 15px;
+border-top-right-radius: 15px;
+border-bottom-left-radius: 3px;
+border-top-left-radius: 3px;
+text-shadow: 0 1px 0 #fff;
+}
+
+
+
+
+
 
 
 /* DELETE POST */

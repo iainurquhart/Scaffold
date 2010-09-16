@@ -29,13 +29,13 @@ function showimage(loc, width, height)
 
 {include:thread_rows}
 
-{if can_post}
-	<div id="fastreply">
-		{include:fast_reply_form}
-	</div>
-{/if}
+<div id="fastreply">
+	{include:fast_reply_form}
+</div>
+
 
 <div class="fm-thread-footer-wrapper">
+	<span>
 	{if can_post}
 		<a href="{path:post_reply}" class="fm-button fm-post-reply">{lang:post_reply}</a>
 	{/if}
@@ -45,7 +45,7 @@ function showimage(loc, width, height)
 	{if can_post}
 		<a href="#fm-fast-reply" class="fm-button fm-fast-reply">{lang:fast_reply}</a>
 	{/if}
-
+	</span>
 	<p>{current_page} {lang:of} {total_pages} {lang:Pages} <br />
 	{pagination_links}</p>
 </div>

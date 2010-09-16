@@ -1,19 +1,15 @@
-<table class="tableBorderLeft" cellpadding="0" cellspacing="0" border="0" style="width:100%;" >
-<tr>
-<td class="tableHeadingBG" colspan="3">
-<div class="tableHeading">{lang:poll}</div>
-</td>
+<div class="fm-poll-wrapper">
+<div class="fm-inset">
+	
+	<table border='0' cellspacing='0' cellpadding='0' class="fm-data-grid">
+	<tr>
+		<th colspan="2"><strong>{lang:poll}:</strong> {poll_question}<br />
+		<span>{lang:total_votes} {total_votes}</span></th>
+	</tr>
+	{include:poll_answer_rows}
+	</table>
+	<!-- {lang:voter_message} -->
+	
+</div>
 
-</tr><tr>
-<td class="tableRowHeadingBold" colspan="3">{poll_question}</td>
-</tr>
-
-{include:poll_answer_rows}
-
-
-<tr>
-<td class="tableCellOne" colspan="1"><b>{lang:total_votes} {total_votes}</b></td>
-<td class="tableCellOne" colspan="2"><div class="lighttext">{lang:voter_message}</div></td>
-</tr>
-</table>
-<div class="spacer"></div>
+</div>
