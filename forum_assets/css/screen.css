@@ -17,7 +17,7 @@ a.fm-button, a.fm-botton:visited {
 	float: right;
 }
 
-#fm-header {padding: 25px 0 10px 0;}
+#fm-header {padding: 10px 0 10px 0;}
 #fm-header * {margin: 0; padding: 0;}
 #fm-header h1 { margin:8px 0 25px 0; font-size:2em;}
 
@@ -81,6 +81,8 @@ ul#fm-home-tools li a {display: block; padding: 5px 10px;}
 .fm-topic-subtitle {padding: 0 15px;}
 .fm-thread-footer-wrapper p {padding-top: 15px;}
 
+.fm-register-prompt {padding-top: 10px; border-top: none;}
+
 .fm-header-wrapper span,
 .fm-thread-footer-wrapper span {float: right;}
 
@@ -135,7 +137,7 @@ ul#fm-home-tools li a {display: block; padding: 5px 10px;}
 
 .fm-forum-topic .fm-topic-icon {width: 10px; text-align: center;  padding-left:15px; padding-right: 5px; padding-top: 10px;}
 
-.fm-forum-topic .fm-heading {width: 450px; padding-top: 15px; padding-bottom: 15px;}
+.fm-forum-topic .fm-heading {width: 450px; }
 .fm-forum-topic .fm-heading h4 a {text-decoration: none; font-size: 14px;}
 .fm-forum-topic .fm-heading p {font-size: 11px;}
 .fm-forum-topic .fm-heading p a {text-decoration: none; color: #666;}
@@ -166,15 +168,15 @@ p.fm-thread-unsubscribe a {color: #666;}
 .fm-field-notes {font-size: 11px; clear: left; display: block; padding: 4px;}
 
 
-.fm-poll-wrapper {background: #343434; color: #fff; padding-bottom: 20px; border-top: 1px solid #fff;}
+.fm-poll-wrapper {background: #888; color: #fff; padding-bottom: 20px; border-top: 1px solid #fff;}
 .fm-poll-wrapper * {margin: 0;}
 .fm-poll-wrapper table {margin-bottom: 0; margin-right: 15px;}
 .fm-poll-wrapper table td,
-.fm-poll-wrapper table th {border-bottom: none; font-weight: normal; background: #343434; text-shadow: 0 1px 0 #000; }
-.fm-poll-wrapper table td {padding: 10px;}
-.fm-poll-wrapper table th { padding: 10px 15px 10px 15px; font-size: 18px;}
+.fm-poll-wrapper table th {border-bottom: none; font-weight: normal; background: #888; text-shadow: 0 1px 0 #343434; }
+.fm-poll-wrapper table td {padding: 5px;}
+.fm-poll-wrapper table th { padding: 5px 15px 5px 15px; font-size: 18px;}
 .fm-poll-wrapper table th span {font-size: 11px;}
-.fm-poll-wrapper table td.fm-poll-choice {text-align: right; width: 250px; background: #000;}
+.fm-poll-wrapper table td.fm-poll-choice {text-align: right; width: 250px; background: #343434;}
 .fm-poll-ask .fm-poll-choice {}
 .fm-poll-wrapper table td.fm-poll-graph-wrapper { }
 .fm-poll-graph {
@@ -195,9 +197,18 @@ text-shadow: 0 1px 0 #fff;
 }
 
 
+.fm-welcome-msg,
+.fm-welcome-msg-logged-in {padding: 5px 15px 8px 15px; margin: 0 0 15px 0; text-align: center;}
+.fm-welcome-msg p {}
+table.fm-has-th-row.fm-quick-login { margin: 10px 0 0 0; font-size: 11px; background: #fff; border: 8px solid #fff;}
+table.fm-has-th-row.fm-quick-login th {width: 80px; text-align: right; vertical-align: middle; border-bottom: none;}
+table.fm-has-th-row.fm-quick-login th,
+table.fm-has-th-row.fm-quick-login td {padding: 5px 10px !important; border-bottom: none !important;}
+table.fm-has-th-row.fm-quick-login td .input {padding: 5px !important; font-size: 11px;}
+.fm-welcome-msg-logged-in {text-align: left;}
 
-
-
+.fm-login-wrapper,
+form#register_member_form  {padding: 0 15px;}
 
 
 /* DELETE POST */

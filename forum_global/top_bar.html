@@ -1,12 +1,12 @@
+{if logged_out}
+	{include:login_form_mini}
+{/if}
+
+{if logged_in}
+	{include:private_message_box}
+{/if}
+
 <div id="fm-header" class="logged{if logged_out}-out{/if}{if logged_in}-in{/if}">
-	<div id="fm-messages">
-		{if logged_in}
-			{include:private_message_box}
-		{/if}
-		{if logged_out}
-			{include:login_form_mini}
-		{/if}
-	</div>
 	<h1><strong>{forum_name}</strong></h1>
 
 	<div id="fm-main-navigation">

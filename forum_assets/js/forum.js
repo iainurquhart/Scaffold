@@ -124,7 +124,7 @@ $(document).ready(function(){
 	$('#fastreply').hide();
 	$('.fm-fast-reply').click(function() {
 		$('#fastreply').slideToggle('200');
-		return null;
+		return false;
 	});
 	
 	// set a poll
@@ -132,7 +132,14 @@ $(document).ready(function(){
 	$('#fm-poll-questions').hide();
 	$('a#fm-toggle-poll').click(function() {
 		$('#fm-poll-questions').slideToggle('200');
-		return null;
+		return false;
+	});
+	
+	
+	$('#fm-toggle-login-wrapper').hide();
+	$('a#fm-toggle-login').click(function() {
+		$('#fm-toggle-login-wrapper').slideToggle('200');
+		return false;
 	});
 	
 });
