@@ -7,11 +7,13 @@
 
 	<div class="fm-message">
 		<p><textarea name='body' class='textarea' rows='12' cols='90'></textarea></p>
-		<p><input type="checkbox" class="checkbox" name="notify" value="y" {notify_checked} />
-		{lang:notify_of_repsonses}</p>
-	</div>
+	
 
 	<p class="fm-submit">
 		<input type="submit" name="submit" class="submit" value="{lang:submit_post}" />
+		
+		<input type="checkbox" class="checkbox" name="notify" value="y" {notify_checked} />
+		{lang:notify_of_repsonses}
 	</p>
+	</div>
 </form>

@@ -19,7 +19,7 @@
 	{include:topic_rows}
 </table>
 
-{include:forum_quick_search_form}
+
 
 <div class="fm-thread-footer-wrapper">
 	{if can_post}
@@ -29,9 +29,4 @@
 	{pagination_links}</p>
 </div>
 
-
-
-{if paginate}
-	{current_page} {lang:of} {total_pages}<br />
-	{pagination_links}
-{/if}
+{include:forum_quick_search_form}

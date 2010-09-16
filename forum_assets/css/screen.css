@@ -84,6 +84,8 @@ ul#fm-home-tools li a {display: block; padding: 5px 10px;}
 .fm-header-wrapper span,
 .fm-thread-footer-wrapper span {float: right;}
 
+.fm-header-wrapper span.fm-required {float: none;}
+
 .fm-notification-wrapper {padding: 0 15px;}
 
 .fm-header-wrapper.fm-extra-info {padding: 5px 15px 20px 15px;}
@@ -126,9 +128,19 @@ ul#fm-home-tools li a {display: block; padding: 5px 10px;}
 .fm-signature-image {margin: 5px 0 10px 0;}
 
 
+.fm-quick-search-form td,
+.fm-quick-search-form th {vertical-align: middle;}
+ .fm-quick-search-form table.fm-has-th-row th {width: 100px;}
+.fm-quick-search-form td .input {width: 200px;}
 
-.fm-forum-topic .fm-topic-icon {width: 10px; text-align: center; padding-left:15px; padding-right: 5px;}
-.fm-forum-topic .fm-heading {width: 450px;}
+.fm-forum-topic .fm-topic-icon {width: 10px; text-align: center;  padding-left:15px; padding-right: 5px; padding-top: 10px;}
+
+.fm-forum-topic .fm-heading {width: 450px; padding-top: 15px; padding-bottom: 15px;}
+.fm-forum-topic .fm-heading h4 a {text-decoration: none; font-size: 14px;}
+.fm-forum-topic .fm-heading p {font-size: 11px;}
+.fm-forum-topic .fm-heading p a {text-decoration: none; color: #666;}
+.fm-forum-topic .fm-heading a:hover {}
+
 .fm-forum-topic th.fm-total-topics,
 .fm-forum-topic th.fm-replies,
 .fm-forum-topic th.fm-views {text-align: center; padding-left: 0; padding-right: 0}
@@ -196,7 +208,7 @@ text-shadow: 0 1px 0 #fff;
 
 table.fm-avatar-grid td {text-align: center; padding: 10px;}
 p.fm-submit {padding: 15px; margin: 0 0 30px 0;}
-.fm-bulletin {padding: 15px; overflow: auto;}
+.fm-bulletin {padding: 15px; overflow: auto; margin-bottom: 15px;}
 .fm-bulletin * {margin: 0; padding: 0;}
 .fm-bulletin textarea {padding: 5px; margin-bottom: 15px;}
 table.fm-has-th-row textarea { max-width: 98%;}
