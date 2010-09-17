@@ -62,7 +62,7 @@ th.fm-total-topics,
 th.fm-replies,
 td.fm-total-topics,
 td.fm-replies {width: 50px; text-align: center;}
-th.fm-info {}
+td.fm-info { padding-right: 10px !important;}
 
 .fm-home-tools-wrapper {overflow: auto; margin-top: -15px;}
 .fm-home-tools-wrapper * {margin: 0; padding: 0;}
@@ -168,15 +168,15 @@ p.fm-thread-unsubscribe a {color: #666;}
 .fm-field-notes {font-size: 11px; clear: left; display: block; padding: 4px;}
 
 
-.fm-poll-wrapper {background: #888; color: #fff; padding-bottom: 20px; border-top: 1px solid #fff;}
+.fm-poll-wrapper {background: #525252; color: #fff; padding-bottom: 20px; border-top: 1px solid #fff;}
 .fm-poll-wrapper * {margin: 0;}
 .fm-poll-wrapper table {margin-bottom: 0; margin-right: 15px;}
 .fm-poll-wrapper table td,
-.fm-poll-wrapper table th {border-bottom: none; font-weight: normal; background: #888; text-shadow: 0 1px 0 #343434; }
+.fm-poll-wrapper table th {border-bottom: none; font-weight: normal; background: #525252; text-shadow: 0 1px 0 #343434; }
 .fm-poll-wrapper table td {padding: 5px;}
 .fm-poll-wrapper table th { padding: 5px 15px 5px 15px; font-size: 18px;}
 .fm-poll-wrapper table th span {font-size: 11px;}
-.fm-poll-wrapper table td.fm-poll-choice {text-align: right; width: 250px; background: #343434;}
+.fm-poll-wrapper table td.fm-poll-choice {text-align: right; padding-right: 10px; width: 250px; background: #343434;}
 .fm-poll-ask .fm-poll-choice {}
 .fm-poll-wrapper table td.fm-poll-graph-wrapper { }
 .fm-poll-graph {
@@ -300,6 +300,26 @@ td.htmlButtonOuterL {width: 10px;}
 
 
 
+.fm-visitor-stats-wrapper {clear: both;}
+.fm-visitor-stats-wrapper .fm-header-wrapper {background: url(../gfx/grad_row.png) repeat-x 0 0; border-bottom: 0; margin-bottom: -18px;}
+.fm-visitor-stats-wrapper .fm-header-wrapper h4 {font-weight: bold; padding-top: 13px;}
+.fm-visitor-stats-wrapper table strong {float: right; font-size: 18px !important; line-height: 1em; }
+.fm-visitor-stats-wrapper td.fm-most-ever {padding-top: 10px; padding-bottom: 10px; font-weight: bold;} 
+
+.fm-whos-online,
+.fm-legend {border-top: 1px solid #E0DFDF; background: url(../gfx/grad_row.png) repeat-x 0 0;  border-bottom: 1px solid #E0DFDF; padding: 10px 0; margin-bottom: 15px; min-height: 45px;}
+
+.fm-legend {overflow: auto;  padding:10px 0; float: right; width: 400px; }
+
+
+
+.fm-whos-online {  width: 540px;}
+.fm-whos-online p {margin: 0 0 0 15px;}
+.fm-whos-online h4,
+.fm-legend h4 {margin: 0 0 10px 15px; font-size: 13px; font-weight: bold;}
+.fm-legend ul {list-style-type: none; margin: 0 15px; padding: 0;}
+.fm-legend ul li { float: left; width: 150px; padding: 0;}
+.fm-legend ul li img {float: left; margin-right: 10px;}
 
 
 
