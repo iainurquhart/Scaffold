@@ -107,6 +107,11 @@ ul#fm-home-tools li a {display: block; padding: 5px 10px;}
 .forum-topic-content .fm-author-info-wrapper {float: left; width: 180px;}
 .forum-topic-content .fm-author-info-wrapper .inset {padding: 15px;}
 .forum-topic-content .fm-author-info-wrapper .inset * {margin: 0; padding: 0}
+.forum-topic-content .fm-author-info-wrapper .fm-author-ban {margin-top: 15px;}
+.forum-topic-content .fm-author-info-wrapper .fm-author-ban a,
+.forum-topic-content .fm-author-info-wrapper .fm-author-report a {font-size: 11px; text-decoration: none; color: #ABABAB; text-shadow: 0 1px 0 #fff;}
+
+
 .forum-topic-content .fm-post {float: left; width: 779px;}
 .forum-topic-content .fm-post .codeblock {padding: 0 15px; width: 70%; font-size: 90%; margin-bottom: 15px; }
 .forum-topic-content .fm-post blockquote {width: 70%; font-size: 90%; background: #f0f0f0; padding: 10px 10px 5px 10px; margin: 10px 15px;}

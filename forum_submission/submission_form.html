@@ -149,10 +149,8 @@ function addPollField()
 		</tr>
 		{/if}
 		<tr>
-			<th scope="row">{lang:options}
-				{if show_more_options}<br />
-				<a href="javascript:void(0);" onclick="showhide('options');return false;">{lang:more_options}</a>
-				{/if}
+			<th scope="row">
+				{lang:options}
 			</th>
 			<td class="fm-content-wrapper">
 				<input type="checkbox" class="checkbox" name="notify" value="y" {notify_checked} /> {lang:notify_of_repsonses}<br />

@@ -28,6 +28,18 @@
 				<a href="{path:send_private_message}">{lang:pm_short}</a>
 			</p>
 			
+			{if can_ban}
+			<p class="fm-author-ban">
+				<a href="{path:ban_member}">{lang:ban_member}</a>
+			</p>
+			{/if}
+
+			{if can_report}
+			<p class="fm-author-report">
+				<a href="{path:report}" title="{lang:report}">{lang:report}</a>
+			</p>
+			{/if}
+			
 		</div>
 	</div>
 
