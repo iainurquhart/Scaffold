@@ -47,23 +47,41 @@
 		<div class="inset">
 
 			<div class="fm-post-utilities">
+			
 				{if can_delete}
 					<a href="{path:delete_post}" class="fm-button fm-delete-post  delete">{lang:delete}</a>
 				{/if}
+				
 				{if is_topic}
 					{if can_change_status}
 						<a href="{path:change_status}" class="fm-button fm-change-status">{lang:change_status}</a>
 					{/if}
 					{if can_move}
-						<a href="{path:move_topic}" class="fm-button fm-move-post">{lang:move}</a>
+						<a href="{path:move_topic}" class="fm-button fm-move-topic">{lang:move}</a>
+					{/if}
+					{if can_merge}
+						<a href="{path:merge_topic}" class="fm-button fm-merge-topic">{lang:merge}</a>
+					{/if}
+					{if can_split}
+						<a href="{path:split_topic}" class="fm-button fm-split-topic">{lang:split}</a>
+					{/if}	
+				{/if}
+				
+				{if is_post}
+					{if can_move}
+						<a href="{path:move_reply}" class="fm-button fm-move-post">{lang:move}</a>
 					{/if}
 				{/if}
+				
 				{if can_edit}
 					<a href="{path:edit_post}" class="fm-button fm-edit-post">{lang:edit}</a>
 				{/if}
 				{if can_post}
 					<a href="{path:quote_reply}" class="fm-button quote-post">{lang:quote}</a>
 				{/if}
+				
+				
+				
 			</div>
 		
 			{body}
