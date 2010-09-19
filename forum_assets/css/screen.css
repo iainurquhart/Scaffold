@@ -24,12 +24,14 @@ a.fm-button, a.fm-botton:visited {
 #fm-header #fm-messages {float: right; width: 400px; text-align: right;}
 #fm-header #fm-messages .fm-message-inset {padding-right: 15px;}
 
-#fm-main-navigation {overflow: auto;}
-#fm-main-navigation ul {margin:0; padding:0; list-style-type:none;}
-#fm-main-navigation li {float: left; line-height: 1.1em; margin: 0.5em 0.5em 0em 0; padding: 0; font-size: 14px;}
-#fm-main-navigation ul li a {text-decoration:none;  padding: 1em 1em 1em 1em; display:block; float:left; text-shadow: 0 1px 0 #fff;}
 
-#fm-crumbs {margin-bottom: 15px; font-size: 11px; position: relative;}
+#fm-main-navigation {overflow: auto;}
+#fm-main-navigation ul, 
+#fm-main-navigation li {margin: 0;padding: 0;display: inline;list-style-type: none; }
+#fm-main-navigation li {line-height: 1.1em; margin: 0.5em 0.5em 0em 0; padding: 0; font-size: 14px;}
+#fm-main-navigation a {float: left;line-height: 14px;font-weight: bold;text-decoration: none;color: #999; padding: 1em 1em 1em 1em; margin-right: 5px;}
+
+#fm-crumbs {margin-bottom: 15px; font-size: 11px; position: relative; clear: both;}
 #fm-crumbs p {margin: 0; padding: 10px;}
 #fm-crumbs p,
 #fm-crumbs p a {text-decoration: none;}
@@ -103,7 +105,7 @@ ul#fm-home-tools li a {display: block; padding: 5px 10px;}
 .fm-thread-footer-wrapper .paginate a {padding: 5px; display: block; background: #ABABAB; color: #fff; text-decoration: none;}
 .fm-thread-footer-wrapper .paginate a:hover {background: #222;}
 
-.forum-topic-content {overflow: auto; background: url(../gfx/forum-topic-content_bg.png) repeat-y 0 0; border-right: 1px solid #e0dfdf;}
+.forum-topic-content {overflow: auto; background: url(../gfx/forum-topic-content_bg.png) repeat-y 0 0; border-right: 1px solid #e0dfdf; clear: left; display: block; height: 1%;}
 .forum-topic-content .fm-author-info-wrapper {float: left; width: 180px;}
 .forum-topic-content .fm-author-info-wrapper .inset {padding: 15px;}
 .forum-topic-content .fm-author-info-wrapper .inset * {margin: 0; padding: 0}
@@ -112,12 +114,13 @@ ul#fm-home-tools li a {display: block; padding: 5px 10px;}
 .forum-topic-content .fm-author-info-wrapper .fm-author-report a {font-size: 11px; text-decoration: none; color: #ABABAB; text-shadow: 0 1px 0 #fff;}
 
 
-.forum-topic-content .fm-post {float: left; width: 779px;}
+.forum-topic-content .fm-post {float: left; width: 764px;}
 .forum-topic-content .fm-post .codeblock {padding: 0 15px; width: 70%; font-size: 90%; margin-bottom: 15px; }
 .forum-topic-content .fm-post blockquote {width: 70%; font-size: 90%; background: #f0f0f0; padding: 10px 10px 5px 10px; margin: 10px 15px;}
+.forum-topic-content .fm-post blockquote blockquote {font-size: 100%;}
 .forum-topic-content .fm-post blockquote p {margin-bottom: 5px;}
 .forum-topic-content .fm-post .quote_author {font-weight: bold;}
-.forum-topic-content .fm-post .inset {padding: 15px;}
+.forum-topic-content .fm-post .inset {padding: 15px 0 15px 15px;}
 .forum-topic-content .fm-post-utilities a.fm-button {margin-left: 5px; font-size: 80%;}
 .forum-topic-content .fm-post-utilities {float: right; padding: 0 0 15px 30px;}
 .forum-topic-content .fm-post .fm-post-attachments {padding: 15px 0 0 0;}

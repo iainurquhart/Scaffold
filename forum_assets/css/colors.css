@@ -30,8 +30,8 @@ ul#fm-home-tools li a {background:#f0f0f0; color:#000; text-decoration: none;}
 input.input,
 textarea {border: 1px solid #c3c9c6;}
 
-#fm-main-navigation {border-bottom:5px solid #939498;}
-#fm-main-navigation ul li a {background:#f0f0f0; color:#000;}
+#fm-crumbs {border-top:5px solid #939498;}
+#fm-main-navigation ul li a {background:#f0f0f0; color:#000; text-shadow: 0 1px 0 #fff;}
 #fm-main-navigation ul li a:hover,
 #fm-main-navigation ul li a.active{background: #d7d7d7; color:#000;}
 
