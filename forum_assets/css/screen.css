@@ -31,10 +31,10 @@ a.fm-button, a.fm-botton:visited {
 #fm-main-navigation li {line-height: 1.1em; margin: 0.5em 0.5em 0em 0; padding: 0; font-size: 14px;}
 #fm-main-navigation a {float: left;line-height: 14px;font-weight: bold;text-decoration: none;color: #999; padding: 1em 1em 1em 1em; margin-right: 5px;}
 
-#fm-crumbs {margin-bottom: 15px; font-size: 11px; position: relative; clear: both;}
-#fm-crumbs p {margin: 0; padding: 10px;}
+#fm-crumbs {margin-bottom: 15px; font-size: 11px; position: relative; clear: both; height: 1%;}
 #fm-crumbs p,
-#fm-crumbs p a {text-decoration: none;}
+#fm-crumbs p a {text-decoration: none; margin: 0; padding: 0; line-height: 16px;}
+#fm-crumbs p {padding: 10px;}
 
 #fm-crumbs .fm-quick-search {position: absolute; right: 0; width: 300px; top:0; text-align: right; padding: 5px 15px 0 0;}
 #fm-crumbs .fm-quick-search input.input {width: 200px; padding: 4px;}
