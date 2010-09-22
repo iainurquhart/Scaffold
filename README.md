@@ -2,18 +2,19 @@
 
 ### Overview
 
-Not ready for prime time yet, it's work in progress.
+Scaffold is intended as a base start point for developers working with the EE2 Discussion Forum Module. 
 
-I've worked very quickly, rewriting view files with the intent of giving devs as much control via css as possible. Tables have been removed where possible, many remain.
+The view files have been written with the intent of giving devs as much control via css as possible. Lots of tables have been removed, many still remain but at least they have hooks to style for your needs.
 
 Take it for a spin here: [http://scaffold.iain.co.nz/forums/](http://scaffold.iain.co.nz/forums/)
 
-I'm still working through a few remaining view files, with some key tasks outstanding.
+Some tasks are outstanding.
 
- - CSS needs a big tidy up
- - Many js functions need rewritten.
+ - CSS needs a big tidy up - I worked very quickly writing css as I went through each template.
+ - Some icons are still from the default theme and need replacing
+ - Many js functions could be 'jQueryfied', there's a lot of old school js still in there from the default EL theme.
  
-If you find my work useful for your project, there's a nice green Pledgie donation button at the top of the page which could do with some love... You'd make this person in New Zealand quite happy, you would.
+Its still not an 'ideal' theme, but definitely a much better starting point than the EL themes.
 
 ### Installation
 
@@ -32,9 +33,13 @@ Inside `html_header.html` you'll need to update the paths if your theme folder i
 
 And within `top_bar.html` you'll need to edit the main header file of the site to suit your needs.
 
+There are some psd files within `/forum_assets/` which you'll find useful if you want to add some spice to the icons I've put in there. And there is the background image for creating faux columns on the threads view.
+
 ###  License / Disclaimer
 
 Copyright (c) 2010 Iain Urquhart - shout@iain.co.nz
+
+If you find my work useful for your commercial project, please consider a $25 donation using the pledgie button above. Your generosity would support continued development of the theme.
 
 This theme is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
