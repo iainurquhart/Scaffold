@@ -1,7 +1,15 @@
 <div class="forum-topic-content fm-thread-row">
 	<div class="fm-post-meta">
-		<p>Posted {post_date format="%d %F %Y %h:%i %A"} 
-		{if can_view_ip}<em class="fm-poster-ip">{lang:ip_address} {ip_address}</em>{/if}</p>
+		<p>Posted {post_date format="%d %F %Y %h:%i %A"}
+			{if is_post}
+				<em class="fm-thread-permalink">
+					<a name="{post_id}" href="{path:post_link}" title="{lang:post_permalink}">#{post_number}</a>
+				</em>
+			{/if}
+			{if can_view_ip}
+				<em class="fm-poster-ip">{lang:ip_address} {ip_address}</em>
+			{/if}	
+		</p>
 	</div>
 	<div class="fm-author-info-wrapper">
 		<div class="inset">

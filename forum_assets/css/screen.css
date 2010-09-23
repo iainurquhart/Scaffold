@@ -164,7 +164,9 @@ ul#fm-home-tools li a {display: block; padding: 5px 10px;}
 
 .fm-post-meta {padding: 5px 15px;}
 .fm-post-meta p {margin: 0; padding: 0;}
-.fm-post-meta .fm-poster-ip {float: right; font-style: normal;}
+.fm-post-meta .fm-poster-ip,
+.fm-post-meta .fm-thread-permalink {float: right; font-style: normal;}
+.fm-post-meta .fm-thread-permalink {margin-left: 15px;}
 
 .fm-post-author-rank {clear: left; display: block;}
 
