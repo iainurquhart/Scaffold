@@ -25,8 +25,8 @@
 	{if can_post}
 		<a href="{path:new_topic}" class="fm-button fm-new-topic">{lang:post_new_topic}</a>
 	{/if}
-	<p>{current_page} {lang:of} {total_pages} {lang:Pages}</p>
 	{if paginate}
+	<p>{current_page} {lang:of} {total_pages} {lang:Pages}</p>
 	<table class="fm-stoopid-pagination" cellspacing="0" cellpadding="0" border="0"><tr>{pagination_links}</tr></table>
 	{/if}
 </div>
