@@ -35,6 +35,12 @@ And within `top_bar.html` you'll need to edit the main header file of the site t
 
 There are some psd files within `/forum_assets/` which you'll find useful if you want to add some spice to the icons I've put in there. And there is the background image for creating faux columns on the threads view.
 
+### Donations
+
+You can use all my code without paying anything! Having said that, a lot of work has gone into creating this module. If my code saves you some time and trouble, and you feel like making a small donation to support my future development efforts, it would be very much appreciated.
+
+[Make a donation via PayPal](http://iain.co.nz/donate/)
+
 ###  License / Disclaimer
 
 Copyright (c) 2010 Iain Urquhart - shout@iain.co.nz
