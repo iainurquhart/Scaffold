@@ -46,10 +46,12 @@ function showimage(loc, width, height)
 		<a href="#fm-fast-reply" class="fm-button fm-fast-reply">{lang:fast_reply}</a>
 	{/if}
 	</span>
+
+	{paginate}
 	<p>{current_page} {lang:of} {total_pages} {lang:Pages} </p>
-	{if paginate}
+	
 	<table class="fm-stoopid-pagination" cellspacing="0" cellpadding="0" border="0"><tr>{pagination_links}</tr></table>
-	{/if}
+	{/paginate}
 </div>
 
 
