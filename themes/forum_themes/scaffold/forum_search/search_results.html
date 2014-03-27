@@ -14,6 +14,8 @@
 </table>
 
 <div class="fm-thread-footer-wrapper">
-	<p>{current_page} {lang:of} {total_pages} {lang:Pages} <br />
-	{pagination_links}</p>
+	{paginate}
+	<p class="fm-pagination-summary">{current_page} {lang:of} {total_pages} {lang:Pages} </p>
+	<p class="fm-pagination">{pagination_links}</p>
+	{/paginate}
 </div>

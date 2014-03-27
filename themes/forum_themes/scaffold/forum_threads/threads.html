@@ -48,9 +48,8 @@ function showimage(loc, width, height)
 	</span>
 
 	{paginate}
-	<p>{current_page} {lang:of} {total_pages} {lang:Pages} </p>
-	
-	<table class="fm-stoopid-pagination" cellspacing="0" cellpadding="0" border="0"><tr>{pagination_links}</tr></table>
+	<p class="fm-pagination-summary">{current_page} {lang:of} {total_pages} {lang:Pages} </p>
+	<p class="fm-pagination">{pagination_links}</p>
 	{/paginate}
 </div>
 
